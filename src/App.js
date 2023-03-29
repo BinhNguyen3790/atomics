@@ -6,7 +6,7 @@ import Contact from './pages/Contact';
 import News from './pages/News';
 function App() {
   return (
-    <div className="App">
+    <div className="app">
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} ></Route>
