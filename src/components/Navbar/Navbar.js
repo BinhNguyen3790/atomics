@@ -4,7 +4,7 @@ import './styled.js';
 function Navbar() {
   return (
     <div className='boxNavbar'>
-      <a className='navbar-link' href='#'>
+      <a className='navbar-link' href='#0'>
         <i className="fa-solid fa-bars"></i>
       </a>
       <nav className='navbar'>

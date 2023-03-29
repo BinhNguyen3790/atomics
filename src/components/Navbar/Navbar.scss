@@ -17,12 +17,14 @@
 .boxNavbar {
   position: relative;
   .navbar-link {
+    display: none;
     position: absolute;
     right: 1rem;
     top: 1rem;
   }
   .navbar {
-    display: none;
+    // display: none;
+    display: flex;
     justify-content: flex-end;
     position: fixed;
     top: 0;
