@@ -1,17 +1,31 @@
-import './assets/scss/app.scss';
-import Navbar from './components/Navbar/Navbar';
+import { Fragment } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import Home from './pages/Home'
-import Contact from './pages/Contact';
-import News from './pages/News';
+import { publicRoutes } from './routers';
+import { DefaultLayout } from './components/layout';
 function App() {
   return (
     <div className="app">
-      <Navbar />
       <Routes>
-        <Route path="/" element={<Home />} ></Route>
-        <Route path="/News" element={<News />} ></Route>
-        <Route path="/Contact" element={<Contact />} ></Route>
+        {publicRoutes.map((route, index) => {
+          const Page = route.component;
+          let Layout = DefaultLayout;
+          if (route.layout) {
+            Layout = route.layout;
+          } else if (route.layout === null) {
+            Layout = Fragment;
+          }
+          return (
+            <Route
+              key={index}
+              path={route.path}
+              element={
+                <Layout>
+                  <Page />
+                </Layout>
+              }
+            />
+          );
+        })}
       </Routes>
     </div>
   );
