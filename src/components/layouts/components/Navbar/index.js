@@ -12,8 +12,8 @@ function Navbar() {
       </a>
       <nav className={cx('navbar')}>
         <Link to="/">Home</Link>
-        <Link to="/News">News</Link>
-        <Link to="/Contact">Contact</Link>
+        <Link to="/news">News</Link>
+        <Link to="/contact">Contact</Link>
       </nav>
     </div>
   );
